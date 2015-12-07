@@ -1,0 +1,15 @@
+<html>
+  <body bgcolor="{{ bgcolor }}">
+
+  <center><h1><font color="white">Welcome To Matt's Site</br>
+  <p style="font-size:160%;">
+
+  <img src="{{ img_url }}"></br></h1>
+
+
+List Of Countries That Have Been Here: {% for countryname in countrylist %}
+{{ countryname }}</br>
+{% endfor %}
+{{ countrycount }}
+  </body>
+  </html>

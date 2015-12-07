@@ -1,0 +1,28 @@
+<html>
+  <body bgcolor="{{ bgcolor }}">
+
+  <center><h1><font color="white">Welcome To Matt's</h1></br>
+  <h2 style="font-size:300%;">MAVP</h2></br>
+  <p style="font-size:160%;">
+  (minimal almost viable product)</br>
+  Your country is: {{ country }}</br>
+  Your IP Address Is: {{ client_ip }}</br>
+  Your City Is: {{ city }}</br>
+  There have been {{ pagehit }} hits</br></p>
+  <img src="{{ img_url }}">
+
+  <!--Weatherzone local weather-->
+	<style type="text/css">
+	.weatherzone { font-family: Tahoma, Arial, Sans-Serif; font-size: small; font-weight: normal; color: #323232; background-color: #EFEFEF; }
+	.weatherzone_head { font-family: Tahoma, Arial, Sans-Serif; font-size: small; font-weight: bold; text-align: center; color: #EFEFEF; background-color: #4185A5; }
+	</style>
+	<script type="text/javascript" src="http://www.weatherzone.com.au/woys/page_local.jsp?postcode={{postcode}}"></script>
+	<a href="http://www.weatherzone.com.au"></a>
+	<!--end Weatherzone local weather-->
+
+List Of Countries That Have Been Here: {% for countryname in countrylist %}
+{{ countryname }}</br>
+{% endfor %}
+{{ countrycount }}
+  </body>
+  </html>
